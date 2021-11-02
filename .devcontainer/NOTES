@@ -1,0 +1,36 @@
+step 1:
+
+# install renv on a local directory to instantiate the cache..
+
+#step 2:
+#make a local renv directory for persistent renv cache across containers.
+ln -s /Users/ergonyc/Library/Application\ Support/renv /usr/local/opt/renv 
+
+# or better yet set CACHE directly to that 
+RENV_PATHS_CACHE_HOST=${HOME}/Library/Application\ Support/renv/cache
+
+#update... 
+${HOME}/Library/Caches/org.R-project.R/R/renv
+# changes... "For new installations of renv using R (>= 4.0.0), renv will use tools::R_user_dir() to resolve the root directory. ""
+
+/Library/Caches/org.R-project.R/R/renv
+
+
+
+
+
+change `/home/$USER` to `$HOME` to allow for macOs and linux equivalenc
+
+
+
+experiment
+
+# set separately (as on czi machine)
+VOLUME_PATH
+CONTAINER_PATH
+
+
+
+ADD:      - ${CONTAINER_PATH}:${CONTAINER_PATH}
+CHANGE:           - ${HOME}/.ssh:/home/${USER}/.ssh        <<<       - /home/${USER}/.ssh:/home/${USER}/.ssh
+

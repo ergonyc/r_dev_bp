@@ -12,7 +12,7 @@
 
 	// Add more local mounts to container
 	"mounts": [
-		"source=/opt/local/renv/cache,target=/renv/cache,type=bind,consistency=cached"
+		"source=/usr/local/opt/renv/cache,target=/renv/cache,type=bind,consistency=cached"
 	],
 
 	// Set *default* container specific settings.json values on container create.
